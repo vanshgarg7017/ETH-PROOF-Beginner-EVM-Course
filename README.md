@@ -29,14 +29,14 @@ contract Token{
 }
 ```
 ### Expalanation
-I declared a contract named "MyToken" that will encapsulate the functionality and data related to a custom token. I  created three variables. These variables are declared as public, meaning they can be accessed from outside the contract. They store the name and abbreviation of the token (ComputerScience and CS, respectively) as well as the total supply of the token, initially set to zero. 
+I declared a contract named "Token" that will encapsulate the functionality and data related to a custom token. I  created three variables. These variables are declared as public, meaning they can be accessed from outside the contract. They store the name and abbreviation of the token (ComputerScience and CS, respectively) as well as the total supply of the token, initially set to zero. 
 
-In the next part, I created a mapping variable (address => uint). This state that the address is mapped to uint and assigns its values balances. 
+In the next part, I created a mapping variable (address => uint). This state that the address is mapped to uint and assigns its values _mybalances. 
 
-After that I created a function allows the contract owner to mint new tokens. It takes two parameters: _address, which represents the address to which the tokens will be minted, and _value, which represents the amount of tokens to be minted. The function increases the total supply by the specified value and adds the minted tokens to the balance of the given address. 
+After that I created a function allows the contract owner to mint new tokens. It takes two parameters: _myaddress, which represents the address to which the tokens will be minted, and _myvalue, which represents the amount of tokens to be minted. The function increases the total supply by the specified value and adds the minted tokens to the balance of the given address. 
 
 
-I created a another burn function that is opposite of mint function. Burn function allows token holders to burn (destroy) their tokens. It takes two parameters: _address, representing the address from which tokens will be burned, and _value, representing the amount of tokens to be burned. The function first checks if the address has a sufficient balance to burn the specified amount of tokens. If so, it subtracts the burned tokens from the total supply and reduces the balance of the given address.
+I created a another burn function that is opposite of mint function. Burn function allows token holders to burn (destroy) their tokens. It takes two parameters: _myaddress, representing the address from which tokens will be burned, and _myvalue, representing the amount of tokens to be burned. The function first checks if the address has a sufficient balance to burn the specified amount of tokens. If so, it subtracts the burned tokens from the total supply and reduces the balance of the given address.
 
 ### Compilation
 To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.18" (or another compatible version), and then click on the "Compile Token.sol" button.
@@ -46,7 +46,7 @@ Once the code is compiled, you can deploy the contract by clicking on the "Deplo
 
 After compiling the code, you can proceed with contract deployment. During deployment, you will encounter six buttons, out of which two are colored orange and four are colored Steel Blue. The orange buttons represent functions, while the Steel Blue buttons represent variables.
 
-When you click on "totenName," it will display "ComputerScience" Clicking on "tokenAbbrv" will show "Cs" The "totalSupply" is currently set to 0, and the "balance" is not displaying any value.
+When you click on "totenName," it will display "ComputerScience" Clicking on "tokenAbbrv" will show "CS" The "totalSupply" is currently set to 0, and the "balance" is not displaying any value.
 
 To proceed, select any random address from the displayed accounts above the deploy button. Copy the chosen address to the clipboard.
 
